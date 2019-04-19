@@ -8,6 +8,43 @@
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Chance Murphy | Contact</title>
+    <script>
+    function validate(){
+      // Write a function that displays the appropriate error message(s) if a field is left blank.  Make sure the form action is not performed if either field is blank.
+
+      var checked = true;
+
+      if (document.getElementById("name").value.length == 0 ) {
+        document.getElementById("nameError").style.display = "block"
+        checked = false;
+      } else {
+        document.getElementById("nameError").style.display = "none"
+      }
+
+      if (document.getElementById("todays-date").value.length == 0 ) {
+        document.getElementById("dateError").style.display = "block"
+        checked = false;
+      } else {
+        document.getElementById("dateError").style.display = "none"
+      }
+
+      if (document.getElementById("email").value.length == 0 ) {
+        document.getElementById("emailError").style.display = "block"
+        checked = false;
+      } else {
+        document.getElementById("emailError").style.display = "none"
+      }
+
+      if (document.getElementById("message").value.length == 0 ) {
+        document.getElementById("messageError").style.display = "block"
+        checked = false;
+      } else {
+        document.getElementById("messageError").style.display = "none"
+      }
+
+      return checked;
+    }
+    </script>
 </head>
 <body>
 <header>
@@ -46,23 +83,27 @@
      </div>
      <img src="images/ChanceHeadshot.jpg" alt="none">
    </div>
-   <form id="main" method="POST" action="https://formspree.io/chance157@gmail.com">
+   <form id="main" method="POST" onsubmit="return validate();" action="https://formspree.io/chance157@gmail.com">
      <fieldset class="contact">
        <label>
          Name
-         <input type="text" name="name" placeholder="Your Name">
+         <input type="text" name="name" id="name" placeholder="Your Name">
+         <p class="errorMsg" id="nameError">Please leave your name!</p>
        </label>
        <label>
          Date
-         <input type="date" name="todays-date" placeholder="Today's Date">
+         <input type="date" name="todays-date" id="todays-date" placeholder="Today's Date">
+         <p class="errorMsg" id="dateError">Please enter the date!</p>
        </label>
        <label>
          Email
-         <input type="email" name="email" placeholder="Your Email">
+         <input type="email" name="email" id="email" placeholder="Your Email">
+         <p class="errorMsg" id="emailError">Please leave your email!</p>
        </label>
        <label>
          Message
-         <textarea name="message" placeholder="What can I help you with?"></textarea>
+         <textarea name="message" id="message" placeholder="What can I help you with?"></textarea>
+         <p class="errorMsg" id="messageError">Please leave a message!</p>
        </label>
     </fieldset>
     <fieldset class="submit">
