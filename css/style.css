@@ -462,6 +462,40 @@ textarea {
   padding: 10px 20px;
 }
 
+.callout {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  margin-left: 20px;
+  max-width: 300px;
+}
+
+.callout-header {
+  padding: 25px 15px;
+  background: #55d6aa;
+  font-size: 24px;
+  color: #333;
+}
+
+.callout-container {
+  padding: 15px;
+  background-color: #42a685;
+  color: #fff;
+}
+
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 18px;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: #333;
+}
+
 /*
 Footer
 */
