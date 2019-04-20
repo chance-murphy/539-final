@@ -157,4 +157,18 @@
   </div>
 </footer>
 </body>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navigation = document.querySelector(".navigation");
+var sticky = navigation.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navigation.classList.add("sticky")
+  } else {
+    navigation.classList.remove("sticky");
+  }
+}
+</script>
 </html>

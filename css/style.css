@@ -250,6 +250,7 @@ Navigation
 
 .navigation {
   display: flex;
+  overflow: hidden;
   background-color: #55d6aa;
   min-height: 50px;
   border-bottom: 1px solid #42a685;
@@ -319,7 +320,7 @@ a:hover {
 }
 
 .sticky + .content {
-  padding-top: 50px;
+  padding-top: 60px;
 }
 
 .hero-image {
