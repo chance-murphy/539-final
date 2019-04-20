@@ -454,7 +454,7 @@ textarea {
 .submit .btn {
   background: linear-gradient(#55d6aa, #42a685);
   border: 1px solid #42a685;
-  color: #333;
+  color: #fff;
   cursor: pointer;
   font-size: 14px;
   font-weight: bold;
