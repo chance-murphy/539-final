@@ -16,6 +16,21 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-138655719-1');
+
+    window.onscroll = function() {
+      myFunction()
+    }
+
+    var navigation = document.getElementById("navigation")
+    var stickyNav = navigation.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= stickyNav) {
+        navigation.classList.add("sticky")
+      } else {
+        navigation.classList.remove("sticky")
+      }
+    }
     </script>
     <title>Chance Murphy | Home</title>
 </head>
