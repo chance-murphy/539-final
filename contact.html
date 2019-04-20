@@ -50,6 +50,15 @@
 
       return checked;
     }
+
+    function thanks(){
+      if (document.getElementById("name").value.length == 0 ) {
+        document.getElementById("nameError").style.display = "block"
+        checked = false;
+      } else {
+        document.getElementById("nameError").style.display = "none"
+      }
+    }
     </script>
     <title>Chance Murphy | Contact</title>
 </head>
@@ -90,7 +99,7 @@
      </div>
      <img src="images/ChanceHeadshot.jpg" alt="none">
    </div>
-   <form id="main" method="POST" onsubmit="return validate();">
+   <form id="main" method="POST" onsubmit="return validate();" onsubmit="return thanks()">
      <!-- action="https://formspree.io/chance157@gmail.com" -->
      <fieldset class="contact">
        <label>
@@ -119,12 +128,12 @@
     </fieldset>
   </form>
   <div class="callout">
-  <div class="callout-header">Thanks for reaching out!</div>
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
-  <div class="callout-container">
-    <p>Thank you for reaching out! I will review your message and get in touch with you as soon as possible!</p>
+    <div class="callout-header">Thanks for reaching out!</div>
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+    <div class="callout-container">
+      <p>Thank you for reaching out! I will review your message and get in touch with you as soon as possible!</p>
+    </div>
   </div>
-</div>
  </div>
 </main>
 <footer>
