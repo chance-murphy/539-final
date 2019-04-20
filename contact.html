@@ -50,15 +50,6 @@
 
       return checked;
     }
-
-    function thanks(){
-      if (document.getElementById("name").value.length == 0 ) {
-        document.getElementById("nameError").style.display = "block"
-        checked = false;
-      } else {
-        document.getElementById("nameError").style.display = "none"
-      }
-    }
     </script>
     <title>Chance Murphy | Contact</title>
 </head>
@@ -99,29 +90,29 @@
      </div>
      <img src="images/ChanceHeadshot.jpg" alt="none">
    </div>
-   <form id="main" method="POST" onsubmit="return validate();" onsubmit="return thanks()">
+   <form id="main" method="POST" onsubmit="return validate();">
      <!-- action="https://formspree.io/chance157@gmail.com" -->
      <fieldset class="contact">
        <label>
          Name
-         <input type="text" name="name" id="name" placeholder="Your Name">
-         <p class="errorMsg" id="nameError">Please leave your name!</p>
+         <input type="text" name="name" id="name">
        </label>
+       <p class="errorMsg" id="nameError">Please leave your name!</p>
        <label>
          Date
-         <input type="date" name="todays-date" id="todays-date" placeholder="Today's Date">
-         <p class="errorMsg" id="dateError">Please enter the date!</p>
+         <input type="date" name="todays-date" id="todays-date">
        </label>
+       <p class="errorMsg" id="dateError">Please enter the date!</p>
        <label>
          Email
-         <input type="email" name="email" id="email" placeholder="Your Email">
-         <p class="errorMsg" id="emailError">Please leave your email!</p>
+         <input type="email" name="email" id="email">
        </label>
+       <p class="errorMsg" id="emailError">Please leave your email!</p>
        <label>
          Message
-         <textarea name="message" id="message" placeholder="What can I help you with?"></textarea>
-         <p class="errorMsg" id="messageError">Please leave a message!</p>
+         <textarea name="message" id="message"></textarea>
        </label>
+       <p class="errorMsg" id="messageError">Please leave a message!</p>
     </fieldset>
     <fieldset class="submit">
       <input class="btn" type="submit" name="submit" value="Get In Touch!">
