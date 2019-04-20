@@ -46,7 +46,9 @@ Madden-DaddyleagueBanner.jpg-->
 </header>
 <main>
   <div class="portfolio">
-    <h2  id="main">Adobe Style Guide</h2>
+    <button id="main"class="accordion">Adobe Style Guide</button>
+    <!-- <h2  id="main">Adobe Style Guide</h2> -->
+    <div class="project">
     <div class="media">
       <div class="image-fourths">
         <img src="images/Adobe1.png" alt="none">
@@ -61,7 +63,10 @@ Madden-DaddyleagueBanner.jpg-->
         <img src="images/Adobe4.png" alt="none">
       </div>
     </div>
-    <h2>LSNC/AAHOM Consulting Project</h2>
+    </div>
+    <button class="accordion">LSNC/AAHOM Consulting Project</button>
+    <!-- <h2>LSNC/AAHOM Consulting Project</h2> -->
+    <div class="project">
     <div class="media">
       <div class="image-halves">
         <img src="images/Consulting1.jpg" alt="none">
@@ -70,7 +75,10 @@ Madden-DaddyleagueBanner.jpg-->
         <img src="images/Consulting2.jpg" alt="none">
       </div>
     </div>
-    <h2>App Mockup</h2>
+    </div>
+    <button class="accordion">App Mockup</button>
+    <!-- <h2>App Mockup</h2> -->
+    <div class="project">
     <div class="media">
       <div class="image-thirds">
         <img src="images/App1.jpg" alt="none">
@@ -82,7 +90,10 @@ Madden-DaddyleagueBanner.jpg-->
         <img src="images/App3.png" alt="none">
       </div>
     </div>
-    <h2>Social Media Graphics</h2>
+    </div>
+    <button class="accordion">Social Media Graphics</button>
+    <!-- <h2>Social Media Graphics</h2> -->
+    <div class="project">
     <div class="media">
       <div class="image-fifths">
         <img src="images/Design1.jpg" alt="none">
@@ -100,7 +111,10 @@ Madden-DaddyleagueBanner.jpg-->
         <img src="images/Design5.jpg" alt="none">
       </div>
     </div>
-    <h2>Madden League Graphics</h2>
+    </div>
+    <button class="accordion">Madden League Graphics</button>
+    <!-- <h2>Madden League Graphics</h2> -->
+    <div class="project">
     <div class="media">
       <div class="image-thirds">
         <img src="images/Madden1.jpg" alt="none">
@@ -112,7 +126,10 @@ Madden-DaddyleagueBanner.jpg-->
         <img src="images/Madden3.jpg" alt="none">
       </div>
     </div>
-    <h2>Bussiness Card Design</h2>
+    </div>
+    <button class="accordion">Bussiness Card Design</button>
+    <!-- <h2>Bussiness Card Design</h2> -->
+    <div class="project">
     <div class="media">
       <div class="image-thirds">
         <img src="images/CardOne(Front).jpg" alt="none">
@@ -135,6 +152,7 @@ Madden-DaddyleagueBanner.jpg-->
         <img src="images/CardThree(Back).jpg" alt="none">
       </div>
     </div>
+  </div>
   </div>
 </main>
 <footer>
@@ -179,6 +197,21 @@ function myFunction() {
   } else {
     navigation.classList.remove("sticky");
   }
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }
 </script>
 </html>
